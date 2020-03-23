@@ -133,3 +133,5 @@ class TestSuppliers(unittest.TestCase):
         self.assertEqual(len(supplier.products), 2)
         self.assertEqual(supplier.products[1].name, product2.name)
     
+#### tests for query ####
+
