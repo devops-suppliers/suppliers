@@ -98,17 +98,25 @@ def internal_server_error(error):
 ######################################################################
 # GET INDEX
 ######################################################################
-@app.route("/")
+#@app.route("/")
+#def index():
+#    """ Root URL response """
+#    return (
+#        jsonify(
+#            name="Suppliers REST API Service",
+#            version="1.0",
+#            paths=url_for("list_suppliers", _external=True),
+#        ),
+#        status.HTTP_200_OK,
+#    )
+
+@app.route('/')
 def index():
-    """ Root URL response """
-    return (
-        jsonify(
-            name="Suppliers REST API Service",
-            version="1.0",
-            paths=url_for("list_suppliers", _external=True),
-        ),
-        status.HTTP_200_OK,
-    )
+    # data = '{name: <string>, category: <string>}'
+    # url = request.base_url + 'pets' # url_for('list_pets')
+    # return jsonify(name='Pet Demo REST API Service', version='1.0', url=url, data=data), status.HTTP_200_OK
+    return app.send_static_file('index.html')
+
 
 ######################################################################
 # LIST ALL suppliers
