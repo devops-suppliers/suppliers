@@ -6,7 +6,7 @@ $(function () {
 
     // Updates the form with data from the response
     function update_form_data(res) {
-        $("#supplier_id").val(res._id);
+        $("#supplier_id").val(res.supplier_id);
         $("#name").val(res.name);
         $("#category").val(res.category);
         if (res.preferred == true) {
@@ -30,7 +30,7 @@ $(function () {
     }
 
     // ****************************************
-    // Create a Pet
+    // Create a Supplier
     // ****************************************
 
     $("#create-btn").click(function () {
