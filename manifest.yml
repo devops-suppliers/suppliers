@@ -4,7 +4,6 @@ applications:
 - name: nyu-supplier-service-s20
   path: .
   instances: 2
-  host: nyu-supplier-service-s20-CD
   memory: 128M
   routes:
   - route: nyu-supplier-service-s20.us-south.cf.appdomain.cloud/
