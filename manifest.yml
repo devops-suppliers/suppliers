@@ -1,9 +1,10 @@
 ---
-# This manifest deploys a Python Flask application with a Cloudant database
+# This manifest deploys a Python Flask application with a ElephantSQL database
 applications:
 - name: nyu-supplier-service-s20
   path: .
-  instances: 1
+  instances: 2
+  host: nyu-supplier-service-s20-CD
   memory: 128M
   routes:
   - route: nyu-supplier-service-s20.us-south.cf.appdomain.cloud/
