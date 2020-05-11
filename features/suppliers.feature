@@ -35,7 +35,7 @@ Scenario: Delete a Supplier
     And I press the "clear" button
     And I paste the "Id" field
     And I press the "Delete" button
-    And I paste the "Id" field
+    And I press the "clear" button
     And I press the "search" button
     Then I should not see "John" in the results
 
